@@ -88,7 +88,6 @@ function playGame() {
         message.textContent = 'Player 2 wins! 🎉';
         changeBtn();
     }
-
 }
 
 function changeBtn() {
@@ -120,20 +119,6 @@ function resetGame() {
     player2Dice.classList.remove('active');
     player1Dice.classList.add('active');
 }
-
-// double or nothing button
-// make the game fair - po tyle samo rzutów
-// add animations
-// flying cow - zabierająca punkty - przelatujaca krowa, losowo zabiera wszystkie punkty (do zera)
-
-
-// zmienić kolory, powiększyć kontener (tło) żeby nie zmieniało wymiarów w zależności od zawartości; opis pod przyciskiem doubleornorhing - na stałe
-// media queries na mniejszy ekran
-// zmienić porównania na ścisłe ? === 
-
-//ale żeby nie wyświetało podwójnie na kostce?
-// doubleNum zostaje i działa w rolldice - przypisanie 5 po przejsciu kodu do nastepnego klikniecia
-//dezaktywować przyciski 
 
 doubleBtn.addEventListener('click', doubleOrNothing);
 
@@ -188,9 +173,6 @@ function flyingCow() {
         player2clicks++
     }
     player1Turn = !player1Turn
-
-
-
 }
 
 
