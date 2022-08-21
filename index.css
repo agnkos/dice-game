@@ -1,0 +1,178 @@
+html,
+body {
+    --color-1: #EF476F;
+    --color-2: #FFD166;
+    --color-3: #06D6A0;
+    --color-4: #073B4C;
+    --color-5: #118AB2;
+    --color-6: #0a5872;
+    --color-7: rgba(0, 0, 0, 0.95);
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    padding-top: 50px;
+    background-image: linear-gradient(135deg, var(--color-1), var(--color-2));
+    /* background-size: cover; */
+    font-family: 'Roboto', sans-serif;
+    height: 100vh;
+    /* color: var(--color-7); */
+    color: var(--color-4);
+}
+
+.container {
+    width: 600px;
+    text-align: center;
+    margin: 0 auto;
+    background-color: var(--color-2);
+    /* box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75); */
+    padding: 50px;
+    border-radius: 5px;
+}
+
+.players {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.dice {
+    border-radius: 10px;
+    width: 100px;
+    height: 100px;
+    background-color: var(--color-3);
+    margin: 0 auto;
+    font-size: 80px;
+    color: var(--color-4);
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+button {
+    color: #fff;
+    padding: 20px 30px;
+    font-size: 20px;
+    margin-top: 40px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+}
+
+#rollBtn,
+#resetBtn {
+    background-color: var(--color-1);
+}
+
+#doubleBtn,
+#cowBtn {
+    margin-top: 0px;
+    background-color: var(--color-4);
+}
+
+
+button:focus {
+    outline: none;
+}
+
+#resetBtn {
+    display: none;
+}
+
+.active {
+    /* box-shadow: -2px 6px 18px 3px rgba(0, 0, 0, 0.75); */
+    border: 8px solid var(--color-5);
+}
+
+.btn-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+#message {
+    color: var(--color-1);
+    line-height: 25px;
+}
+
+#double-message,
+#cow-message {
+    font-style: italic;
+}
+
+#cow {
+    margin-left: 100%;
+    position: absolute;
+    top: 10%;
+    transform: scale(2);
+}
+
+.animation-right {
+    margin-left: 100%;
+    animation: 1.5s ease-in-out flyingCowRight forwards;
+}
+
+
+
+@keyframes flyingCowRight {
+    0% {
+        margin-left: 100%;
+    }
+
+    50% {
+        margin-left: 50%;
+        top: 50%;
+        transform: rotate(180deg) scale(6);
+    }
+
+    75% {
+        transform: rotate(180deg);
+        transform: scale(2);
+    }
+
+    100% {
+        margin-left: -100%;
+        transform: scale(2);
+    }
+}
+
+.animation-left {
+    margin-left: -100%;
+    animation: 1.5s ease-in-out flyingCowLeft forwards;
+}
+
+@keyframes flyingCowLeft {
+    0% {
+        margin-left: -100%;
+    }
+
+    50% {
+        margin-left: 50%;
+        top: 50%;
+        transform: rotate(-180deg) scale(6);
+    }
+
+    75% {
+        transform: rotate(-180deg);
+        transform: scale(2);
+    }
+
+    100% {
+        margin-left: 100%;
+    }
+}
+
+@media (max-width: 900px) {
+    .btn-container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+        margin-top: 30px;
+    }
+}
