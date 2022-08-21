@@ -31,13 +31,11 @@ function playGame() {
     if (player1Turn) {
 
         if (doubleNum == 1) {
-            console.log(doubleNum)
             player1Score += (randomNumber * 2);
             doubleMessage.innerHTML = 'Double points for Player 1!'
             doubleNum = 5;
         }
         else if (doubleNum == 0) {
-            console.log(doubleNum)
             player1Score += 0;
             randomNumber = 0;
             doubleMessage.innerHTML = 'No extra points for Player 1!'
@@ -58,7 +56,6 @@ function playGame() {
     } else {
 
         if (doubleNum == 1) {
-            console.log(doubleNum)
             player2Score += (randomNumber * 2);
             doubleMessage.innerHTML = 'Double points for Player 2!'
         }
@@ -140,7 +137,6 @@ function flyingCow() {
         cow.classList.add('animation-right');
     }
     const cowNumber = Math.floor(Math.random() * 4 + 1);
-    console.log(cowNumber)
     if (player1Turn) {
         if (cowNumber <= 3) {
             player2Score = 0;
